@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Times</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-main">
+        <a href="#/" class="logo" aria-label="p home">
+          <span class="logo-mark">P</span>
+        </a>
+
+        <nav class="nav-center" id="nav-center">
+          <a href="#/" data-route="/">Inicio</a>
+          <a href="#/league/premier-league">Novos Produtos</a>
+
+          <div class="nav-dropdown">
+            <button class="nav-btn">ligas <span class="caret">▾</span></button>
+            <div class="dropdown" id="dropdown-club"></div>
+          </div>
+
+          <div class="nav-dropdown">
+            <button class="nav-btn">Seleções <span class="caret">▾</span></button>
+            <div class="dropdown" id="dropdown-national"></div>
+          </div>
+
+          <a href="#footer">FAQ</a>
+
+        </nav>
+
+        <div class="header-right">
+          <div class="search-pill" id="search-pill">
+            <span class="search-icon"></span>
+            <input type="search" id="search-input" placeholder="Nome do time" autocomplete="off" />
+            <button id="search-btn" type="button"></button>
+            <div class="search-suggest" id="search-suggest" hidden></div>
+          </div>
+          
+          <button class="icon-btn" aria-label="Account">👤</button>
+          <a href="#/cart" class="icon-btn cart-icon" aria-label="Cart">
+            🛒 <span class="cart-count" id="cart-count">0</span>
+          </a>
+      
+        </div>
+      </div>
+    </header>
+
+
+    <main id="app"></main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-mark">K</span>
+            <span class="brand-name"></span>
+          </div>
+          <p>Compre produtos das principais ligas, seleções nacionais e clássicos retrô —</p>
+          <form class="newsletter" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Email for 10% off" />
+          </form>
+        </div>
+        <div>
+          <h3>Comprar</h3>
+          <ul id="footer-leagues"></ul>
+        </div>
+        <div>
+          <h3>Ajuda</h3>
+          <ul>
+            <li><a href="#">Envio</a></li>
+            <li><a href="#">Devoluções</a></li>
+            <li><a href="#">Rastrear pedido</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© <span id="year"></span> P. All rights reserved.</span>
+          <span>Visa · Mastercard · PayPal · Apple Pay</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+  </body>
+</html>
+
